@@ -1,0 +1,56 @@
+.s-advantages
+  position: relative
+  top: -55px
+  z-index: 2
+
+.advantages-wrap
+  display: flex
+  margin: 0 70px
+  box-shadow: 9px 9px 3px -4px rgba(#000, .2)
+
+
+.adv-item
+  flex-grow: 1
+  padding: 35px 60px 35px 75px
+  display: flex
+  align-items: center
+  background-color: #fff
+  position: relative
+  clip-path: polygon(4% 0,96% 0,100% 10%,100% 100%,100% 100%,0 100%,0 100%,0 10%)
+  background-repeat: no-repeat
+  .svg
+    height: 58px
+    width: auto
+  &-icon
+    display: inline-block
+    margin-right: 20px
+  &-title
+    display: inline-block
+    font-size: 21px
+    font-family: "BebasNeue", sans-serif
+    font-weight: 300
+  &:after, &:before
+    content: ''
+    position: absolute
+    width: 1.5px
+    height: 66px
+    background-color: $accent
+    top: calc(50% - 33px)
+  &:before
+    left: 0
+  &:after
+    right: 0
+  &:first-child
+    &:before
+      display: none
+  &:last-child
+    &:after
+      display: none
+  &:nth-child(2)
+    right: -1px
+    background-image: url('../img/bg-advitem.jpg')
+    background-position: -220px -220px
+  &:nth-child(1)
+    right: -2px
+    background-image: url('../img/bg-advitem.jpg')
+    background-position: 167px -220px

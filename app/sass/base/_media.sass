@@ -5,6 +5,13 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .advantages-wrap
+    margin: 0
+
+  .adv-item
+    padding: 25px 35px 25px 45px
+
   .intro-slide
     h1
       font-size: 90px
@@ -17,6 +24,14 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .adv-item
+    padding: 25px
+    &-icon
+      .svg
+        height: 40px
+    &-title
+      font-size: 19px
 
   .intro-slider
     margin-top: 120px
@@ -56,8 +71,38 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .s-advantages
+    background-color: $grey
+    top: 0
+    padding-top: 45px
+    padding-bottom: 20px
+
+  .adv-item, .adv-item:nth-child(1)
+    background-image: url('../img/bg-advitem.jpg')
+    background-position: 267px -240px
+
+  .adv-item:nth-child(2)
+    background-position: 0 -240px
+
+  .advantages-wrap
+    flex-direction: column
+    box-shadow: none
+
+  .adv-item
+    margin-bottom: 30px
+    clip-path: none
+    box-shadow: 4px 4px 4px rgba(#000, .2)
+    justify-content: center
+    &:before, &:after
+      display: none
+    &-icon
+      .svg
+        height: 60px
+    &-title
+      font-size: 22px
+
   .intro-slide
-    padding: 0 50px
+    padding: 0 50px 10px
     h1
       font-size: 50px
 
@@ -81,11 +126,16 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .adv-item
+    &-icon
+      .svg
+        height: 45px
+
   .intro-slider
     margin-top: 80px
 
   .intro-slide
-    padding: 0 35px
+    padding: 0 35px 10px
     h1
       font-size: 42px
     p
