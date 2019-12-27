@@ -1,0 +1,157 @@
+.s-intro
+  +bg-cover
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: #fff
+    opacity: .8
+
+.intro-wrapper
+  position: relative
+  z-index: 2
+
+.header-line
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 35px 0
+
+.head-buttons
+  .btn
+    margin-right: 13px
+    &:last-child
+      margin-right: 0
+
+.head-phone
+  position: relative
+  .svg
+    width: 24px
+    height: auto
+    margin-right: 8px
+    position: relative
+    top: 7px
+  a
+    font-size: 21px
+    font-weight: 300
+    font-family: "BebasNeue", sans-serif
+    +mt(.3s)
+    position: relative
+    color: $text
+    &:after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 1px
+      background-color: $text
+      left: 0
+      bottom: 0
+      +mt(.3s)
+  &:hover
+    .svg
+      fill: $accent
+    a
+      color: $accent
+      &:after
+        background-color: $accent
+
+.head-marks
+  a
+    display: inline-block
+    position: relative
+    &:hover
+      .svg
+        fill: $accent
+    &.has-items
+      .num
+        display: flex
+  .head-cart
+    margin-left: 22px
+    .num
+      left: -5px
+  .svg
+    height: 33px
+    width: auto
+    fill: $text
+  .num
+    position: absolute
+    width: 14px
+    height: 14px
+    background-color: $accent
+    color: #fff
+    border-radius: 50%
+    font-size: 10px
+    line-height: 1
+    text-align: center
+    display: none
+    align-items: center
+    justify-content: center
+    left: 0
+    bottom: 0
+
+.mnu-line
+  background-color: rgba(#fff, .8)
+
+.main-mnu
+  font-size: 17px
+  font-family: "BebasNeue", sans-serif
+  font-weight: 300
+  a
+    color: $text
+    +mt(.3s)
+    position: relative
+    &:hover
+      color: $accent
+  &>ul
+    display: flex
+    justify-content: center
+    &>li
+      padding: 9px 40px 7px
+      line-height: 1
+      &.droppy__parent
+        position: relative
+        &>a
+          &:after
+            content: ''
+            position: absolute
+            width: 13px
+            height: 6px
+            +bg-cover
+            transition: background-image .3s ease
+            background-image: url('../img/icons/menu-arrow.svg')
+            top: 5px
+            right: -20px
+          &:hover
+            &:after
+              background-image: url('../img/icons/menu-arrow-accent.svg')
+        &>a[aria-expanded="true"]
+          color: $accent
+          &:after
+            transform: rotate(180deg)
+            background-image: url('../img/icons/menu-arrow-accent.svg')
+
+
+.droppy__drop
+  position: absolute
+  top: 30px
+  left: 0
+  width: auto
+  background-color: rgba(#fff, .8)
+  li
+    font-family: "Ubuntu", sans-serif
+    font-size: 13px
+    a
+      display: inline-block
+      padding: 9px 12px
+      white-space: nowrap
+      width: 100%
+      &:hover
+        background-color: $accent
+        color: #fff
+
+
+

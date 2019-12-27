@@ -63,4 +63,54 @@ ul
   display: none!important
 // ======= END TEMPLATE STYLES =======
 
+.svg
+  +mt(.3s)
+
+.btn
+  display: inline-block
+  line-height: 1
+  white-space: nowrap
+  +mt(.3s)
+  font-size: 17px
+  font-family: "BebasNeue", sans-serif
+  padding: 8px 22px 6px
+  text-align: center
+  border-width: 2px
+  border-style: solid
+  text-transform: uppercase
+
+.btn-orange
+  color: #fff
+  border-color: $accent
+  background-color: $accent
+  font-weight: 700
+  &:hover
+    color: $accent
+    background-color: #fff
+
+.btn-transparent
+  color: $accent
+  border-color: $accent
+  background-color: transparent
+  &:hover
+    color: #fff
+    background-color: $accent
+
+.shake-icon
+  &:hover
+    .svg
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+
+@keyframes shake
+  10%, 90%
+    transform: translate3d(-1px, 0, 0)
+
+  20%, 80%
+    transform: translate3d(1px, 0, 0)
+
+  30%, 50%, 70%
+    transform: translate3d(-1px, 0, 0)
+
+  40%, 60%
+    transform: translate3d(1px, 0, 0)
 
