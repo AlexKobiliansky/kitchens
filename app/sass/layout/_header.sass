@@ -1,6 +1,7 @@
 .s-intro
   +bg-cover
   position: relative
+  padding-bottom: 300px
   &:after
     content: ''
     position: absolute
@@ -152,6 +153,76 @@
       &:hover
         background-color: $accent
         color: #fff
+
+.intro-slider
+  margin-top: 165px
+
+.intro-slide
+  line-height: 1
+  padding: 0 70px
+  h1
+    font-family: "BebasNeue", sans-serif
+    font-weight: 700
+    font-size: 118px
+    color: $accent
+    margin-bottom: 0
+  p
+    font-family: "BebasNeue", sans-serif
+    font-weight: 300
+    font-size: 41px
+    margin-bottom: 30px
+
+.head-hamburger
+  order: 3
+  text-align: right
+  width: auto
+  display: none
+
+.hamburger
+  padding: 0
+
+//mmenu customization start
+.mm-menu_theme-dark
+  background-color: $grey
+  text-transform: uppercase
+
+.mm-logo
+  display: block
+  margin: 0 auto
+  transform: scaleY(.60)
+
+.mm-navbars_top
+  border-color: transparent
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listitem:after, .mm-listview
+  border-color: rgba(#fff, .3)
+
+.mm-listitem
+  a
+    padding-top: 14px
+    padding-bottom: 12px
+
+.mm-navbar
+  border: none
+
+
+.mm-menu_theme-dark .mm-navbar a, .mm-menu_theme-dark .mm-navbar>*
+  font-size: 20px
+  color: $text
+  letter-spacing: 2px
+
+.mm-menu_theme-dark .mm-listview a:not(.mm-btn_next)
+  color: $accent
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listitem:after, .mm-listview
+  border-color: $accent
+
+.mm-menu_theme-dark .mm-listview .mm-btn_next:after
+  border-color: $accent
+
+.mm-menu_theme-dark .mm-btn:after, .mm-menu_theme-dark .mm-btn:before
+  border-color: $accent
+//mmenu customization end
 
 
 

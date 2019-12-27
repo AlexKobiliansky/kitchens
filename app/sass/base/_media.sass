@@ -5,15 +5,148 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .intro-slide
+    h1
+      font-size: 90px
+      margin-bottom: 5px
+    p
+      font-size: 36px
+
+  .btn-largetext
+    font-size: 28px
 
 // ≥992px
 +media-breakpoint-down(md)
 
+  .intro-slider
+    margin-top: 120px
+
+  .s-intro
+    padding-bottom: 200px
+
+  .intro-slide
+    h1
+      font-size: 68px
+    p
+      font-size: 28px
+      margin-bottom: 20px
+    .btn-largetext
+      font-size: 22px
+
+  .header-line
+    flex-wrap: wrap
+
+  .head-item
+    width: 50%
+    order: 5
+
+  .head-logo
+    order: 1
+    margin-bottom: 20px
+
+  .head-marks
+    order: 2
+    text-align: right
+
+  .head-phone
+    text-align: right
+
+
+
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .intro-slide
+    padding: 0 50px
+    h1
+      font-size: 50px
+
+  .head-hamburger
+    display: block
+
+  .mnu-line
+    display: none
+
+  .head-logo
+    width: 33.333%
+    margin-bottom: 40px
+
+  .head-marks
+    width: 33.333%
+    text-align: center
+
+  .head-buttons
+    white-space: nowrap
+
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .intro-slider
+    margin-top: 80px
+
+  .intro-slide
+    padding: 0 35px
+    h1
+      font-size: 42px
+    p
+      font-size: 24px
+
+  .head-logo
+    width: auto
+
+  .head-marks
+    margin-bottom: 40px
+  .head-hamburger
+    margin-bottom: 40px
+
+  .head-buttons
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+    .btn
+      margin-right: 0
+      width: calc(50% - 5px)
+
+  .head-phone
+    width: 100%
+    text-align: center
+
+@media screen and (max-width: 370px)
+
+  .header-line
+    position: relative
+
+  .head-hamburger
+    position: absolute
+    top: 35px
+    right: 0
+
+  .head-marks
+    position: relative
+    top: 25px
+    text-align: right
+    .svg
+      height: 25px
+    .head-cart
+      margin-left: 15px
+
+  .head-buttons
+    display: block
+    margin-bottom: 0
+    .btn
+      display: block
+      width: 100%
+      margin-bottom: 20px
+      padding-top: 12px
+      padding-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+
+  .head-phone
+    order: 4
+    margin-bottom: 20px
+
 
 
 /*==========  Mobile First  ==========*/

@@ -1,5 +1,50 @@
 $(document).ready(function(){
 
+    /**
+     * mobile-mnu customization
+     */
+    var mmenu = $('#mobile-mnu');
+    var menuLogo = mmenu.data("logo");
+    var $mmenu = mmenu.mmenu({
+        navbars: [{
+            content: [ "<img src=" + menuLogo + " class=\"img-responsive mm-logo\" alt=\"alt\"/>" ],
+            height: 3
+        }],
+        "pageScroll": true,
+
+        "navbar": {
+            "title" : "",
+        },
+        "extensions": [
+            "theme-dark",
+            "pagedim-black",
+            "position-front",
+            "fx-listitems-slide",
+        ],
+    }, {
+        offCanvas: {
+            pageSelector: "#page-container"
+        },
+    });
+
+    var mmenuBtn = $("#mmenu-btn");
+    var API = $mmenu.data("mmenu");
+
+    mmenuBtn.click(function() {
+        API.open();
+        $(this).addClass('is-active')
+    });
+
+
+    API.bind( "close:start", function() {
+        setTimeout(function() {
+            mmenuBtn.removeClass( "is-active" );
+        }, 300);
+    });
+    /**
+     * end mobile-mnu customization
+     */
+
     $('img.svg').each(function(){
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -30,6 +75,22 @@ $(document).ready(function(){
             // Replace image with new SVG
             $img.replaceWith($svg);
         }, 'xml');
+    });
+
+    $('.intro-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 1,
+        margin: 30,
+        dots: false,
+        autoHeight: false,
+        autoplay: true,
+        autoplayTimeout: 7000,
+        navText: ["", ""],
+        autoplaySpeed: 600,
+        navSpeed: 600
+        // animateIn: "fadeIn",
+        // animateOut: "fadeOut",
     });
 
     var element = document.querySelector( '.main-mnu' );

@@ -86,7 +86,7 @@ ul
   font-weight: 700
   &:hover
     color: $accent
-    background-color: #fff
+    background-color: transparent
 
 .btn-transparent
   color: $accent
@@ -95,6 +95,33 @@ ul
   &:hover
     color: #fff
     background-color: $accent
+
+.btn-largetext
+  font-size: 33px
+  padding: 7px 18px 4px
+  font-weight: normal
+  box-shadow: 4px 4px 4px rgba(#000, .33)
+
+.owl-carousel
+  position: relative
+  .owl-nav
+    position: absolute
+    left: 0
+    top: calc(50% - 10.5px)
+    width: 100%
+    button.owl-prev, button.owl-next
+      width: 10px
+      height: 21px
+      +bg-cover
+      background-image: url('../img/icons/slider-arrow.svg')
+      cursor: pointer
+      position: absolute
+    button.owl-prev
+      left: 0
+    button.owl-next
+      transform: rotate(180deg)
+      right: 0
+
 
 .shake-icon
   &:hover
