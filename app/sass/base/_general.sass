@@ -84,6 +84,9 @@ ul
   border-color: $accent
   background-color: $accent
   font-weight: 700
+  &:active, &:focus
+    background-color: $accent
+    color: #fff
   &:hover
     color: $accent
     background-color: transparent
@@ -92,6 +95,8 @@ ul
   color: $accent
   border-color: $accent
   background-color: transparent
+  &:active, &:focus
+    color: $accent
   &:hover
     color: #fff
     background-color: $accent
@@ -140,4 +145,36 @@ ul
 
   40%, 60%
     transform: translate3d(1px, 0, 0)
+
+.s-cover
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background-repeat: no-repeat
+    background-color: rgba(#fff, .8)
+  .section-wrapper
+    position: relative
+    z-index: 2
+
+.section-title
+  font-family: "BebasNeue", sans-serif
+  font-weight: 700
+  line-height: 1
+  font-size: 86px
+  color: $accent
+  margin-bottom: 0
+
+.before-text
+  font-family: "BebasNeue", sans-serif
+  font-weight: 700
+  font-size: 217px
+  line-height: 1
+  color: #fff
+  opacity: .5
+  position: absolute
 
