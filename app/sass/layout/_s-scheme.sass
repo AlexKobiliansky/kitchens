@@ -1,0 +1,82 @@
+.s-scheme
+  padding: 225px 0 240px
+  counter-reset: step-item
+  &:before
+    background-color: rgba(darken(#fff, 5%), .8)
+  .container
+    position: relative
+  .before-text
+    right: 0
+    top: 140px
+
+.steps-wrap
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+.step-item
+  width: calc(25% - 15px)
+  background-color: #fff
+  box-shadow: 4px 4px 4px rgba(#000, .3)
+  text-align: center
+  position: relative
+  .svg
+    height: 50px
+    width: auto
+  &-icon
+    height: 92px
+    display: flex
+    justify-content: center
+    align-items: center
+  &-title
+    font-family: "BebasNeue", sans-serif
+    color: #fff
+    font-size: 21px
+    padding: 5px
+    background-color: $accent
+    line-height: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      border: 16px solid transparent
+      border-right: 132px solid $accent
+      border-bottom: 0 solid $accent
+      top: -16px
+      right: 0
+  &:before
+    counter-increment: step-item
+    content: counter(step-item)
+    position: absolute
+    font-family: "BebasNeue", sans-serif
+    font-weight: 700
+    color: #fff
+    font-size: 44px
+    line-height: 1
+    left: 0
+    top: -40px
+  &:nth-child(even)
+    margin-top: 18px
+  &:nth-child(odd)
+    margin-top: 115px
+
+.scheme-content
+  .section-title
+    text-align: right
+  padding-left: 65px
+  text-align: justify
+
+.scheme-desc
+  border-top: 2px solid $accent
+  padding-top: 12px
+  font-weight: 300
+
+.scheme-notice
+  text-align: right
+  font-size: 17px
+  font-weight: 300
+  text-transform: uppercase
+  color: $accent

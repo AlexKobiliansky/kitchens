@@ -103,7 +103,19 @@ $(document).ready(function(){
 
     $('.gallery').photoswipe();
 
+    function heightses() {
+        if ($(window).width()<480) {
 
+        }
+
+        $('.step-item-title').height('auto').equalHeights();
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
 
 
     /** FORMS START */

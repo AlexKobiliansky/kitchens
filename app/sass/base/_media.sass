@@ -6,6 +6,14 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .step-item-title
+    &:before
+      border-right-width: 102px
+
+  .s-scheme
+    .section-title
+      font-size: 70px
+
   .s-form
     .section-title
       font-size: 78px
@@ -40,6 +48,21 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-scheme
+    padding: 130px 0
+    .section-title
+      text-align: center
+      margin-bottom: 60px
+      font-size: 68px
+  .scheme-content
+    padding-left: 0
+
+  .steps-wrap
+    margin-bottom: 40px
+
+  .step-item-title:before
+    border-right-width: 158px
 
   .s-form
     .contact-form
@@ -145,6 +168,14 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .s-scheme
+    padding: 100px 0 80px
+    .section-title
+      font-size: 50px
+
+  .step-item-title:before
+    border-right-width: 115px
+
   .form-img
     width: 270px
     left: -40px
@@ -218,6 +249,33 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-scheme
+    padding: 50px 0
+    .section-title
+      font-size: 42px
+      margin-bottom: 40px
+
+  .scheme-notice
+    font-size: 14px
+
+  .steps-wrap
+    flex-wrap: wrap
+
+  .step-item
+    width: calc(50% - 10px)
+    margin-bottom: 20px
+    overflow-x: hidden
+    &-title
+      &:before
+        border-right-width: 233px
+    &:before
+      top: 5px
+      left: 5px
+      color: darken($grey, 5%)
+    &:nth-child(even)
+      margin-top: 0
+    &:nth-child(odd)
+      margin-top: 0
   .s-form
     .section-title
       font-size: 42px
