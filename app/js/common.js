@@ -103,6 +103,18 @@ $(document).ready(function(){
 
     $('.gallery').photoswipe();
 
+
+
+
+    /** FORMS START */
+    var uPhone = $('.user-phone');
+    uPhone.mask("9 999 999 99 99",{autoclear: false});
+
+    $.validate({
+        form : '.contact-form',
+        scrollToTopOnError: false
+    });
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
@@ -116,4 +128,5 @@ $(document).ready(function(){
         });
         return false;
     });
+    /** FORMS END*/
 });
