@@ -1,0 +1,42 @@
+.s-contacts
+  padding: 55px 0 65px
+  background-image: url('../img/bg-s-contacts.jpg')
+  background-repeat: no-repeat
+  background-position: center top
+
+.contacts-wrap
+  margin-top: 50px
+
+.contact-item
+  display: flex
+  align-items: center
+  font-size: 17px
+  text-transform: uppercase
+  margin-bottom: 15px
+  &-icon
+    width: 35px
+    position: relative
+    top: 2px
+  &-desc
+    width: calc(100% - 35px)
+  .svg
+    width: 22px
+    height: auto
+  a
+    color: $text
+    +mt(.3s)
+    &:hover
+      color: $accent
+
+.contacts-notice
+  margin-top: 75px
+  border-top: 2px $accent solid
+  padding-top: 18px
+  font-weight: 300
+  color: #747474
+
+
+#map
+  margin-left: 30px
+  height: 450px
+  background-color: $grey
