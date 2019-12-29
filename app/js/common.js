@@ -102,6 +102,7 @@ $(document).ready(function(){
     } );
 
     $('.gallery').photoswipe();
+    $('.serts-wrap').photoswipe();
 
     $('.preloader').fadeOut();
 

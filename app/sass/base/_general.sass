@@ -232,6 +232,35 @@ form
       bottom: 10px
       transform: rotate(180deg)
 
+.isnohome
+  background-color: $grey
+
+.breadcrumbs
+  padding: 18px 0
+  a
+    +mt(.3s)
+    display: inline-block
+    margin-right: 12px
+    position: relative
+    color: $text
+    &:hover
+      color: $accent
+    &:after
+      content: '/'
+      position: relative
+      right: -7px
+      color: $text
+    &:last-child
+      pointer-events: none
+      &:after
+        display: none
+
+
+
+
+
+
+
 .preloader
   position: fixed
   top: 0
