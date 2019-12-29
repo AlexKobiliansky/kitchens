@@ -4,6 +4,15 @@
   background-repeat: no-repeat
   background-position: center top
   background-color: #fff
+  &.s-cover
+    background-image: url('../img/bg-content.jpg')
+    +bg-cover
+    padding-bottom: 90px
+    padding-top: 0
+    .container
+      position: relative
+      .before-text
+        top: -40px
 
 .contacts-wrap
   margin-top: 50px
