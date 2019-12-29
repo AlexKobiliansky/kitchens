@@ -1,0 +1,102 @@
+.main-foot
+  background-color: #2d2d2d
+  color: #fff
+  padding: 60px 0
+  h3
+    text-transform: uppercase
+    font-size: 17px
+    line-height: 1
+    margin-bottom: 8px
+    position: relative
+    padding-bottom: 8px
+    &:after
+      content: ''
+      position: absolute
+      height: 2px
+      width: calc(100% + 20px)
+      background-color: #b0b0b0
+      left: -20px
+      bottom: 0
+
+.foot-column
+  &:nth-child(1)
+    h3
+      &:after
+        width: 100%
+        left: 0
+  &:nth-child(3)
+    h3
+      display: inline-block
+
+.foot-mnu
+  line-height: 1
+  li
+    margin-bottom: 8px
+  a
+    color: #fff
+    +mt(.3s)
+    &:hover
+      color: #fff
+      text-decoration: underline
+
+.logo-foot
+  display: inline-block
+  margin-bottom: 35px
+
+.soc-title
+  font-size: 17px
+  font-weight: 700
+  text-transform: uppercase
+  margin-bottom: 12px
+
+.socials
+  display: flex
+  align-items: center
+
+.soc-item
+  margin-right: 14px
+  .svg
+    width: 26px
+    height: auto
+    fill: #fff
+    +mt(.3s)
+  &:hover
+    .svg
+      fill: $accent
+  &:last-child
+    margin-right: 0
+
+
+.grey-line
+  height: 60px
+  background-color: $grey
+
+.top-footer
+  margin-bottom: 50px
+
+.bottom-footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.foot-buttons
+  .btn-orange
+    margin-right: 12px
+
+.foot-payment
+  display: flex
+  align-items: center
+  margin-right: 120px
+  .ask
+    padding: 6px 22px 8px
+    .svg
+      height: 21px
+      width: auto
+      fill: #fff
+      transform: rotate(180deg)
+      margin-left: 13px
+      position: relative
+      top: 3px
+
+.payment
+  margin-right: 60px

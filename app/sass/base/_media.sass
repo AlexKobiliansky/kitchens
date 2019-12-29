@@ -6,6 +6,12 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .foot-payment
+    margin-right: 65px
+
+  .payment
+    margin-right: 25px
+
   .step-item-title
     &:before
       border-right-width: 102px
@@ -48,6 +54,31 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .foot-column
+    margin-bottom: 30px
+    &:nth-child(3)
+      h3
+        &:after
+          width: 100%
+          left: 0
+
+  .bottom-footer
+    flex-direction: column
+
+  .foot-buttons
+    margin-bottom: 30px
+
+  .foot-payment
+    margin-right: 0
+    width: 100%
+    flex-direction: column
+
+  .payment
+    margin-right: 0
+
+  .ask
+    display: none
 
   .s-contacts
     padding-bottom: 0
@@ -255,6 +286,29 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .foot-buttons
+    text-align: center
+    .btn
+      width: 174px
+    .btn-orange
+      margin-right: 0
+      margin-bottom: 15px
+
+  .foot-column
+    text-align: center
+    h3
+      display: inline-block
+      &:after
+        left: 0
+        width: 100%
+
+  .top-footer
+    .col-lg-3
+      text-align: center
+
+  .socials
+    justify-content: center
 
   .s-contacts
     .section-title

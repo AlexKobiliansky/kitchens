@@ -94,7 +94,7 @@ $(document).ready(function(){
     });
 
     var element = document.querySelector( '.main-mnu' );
-// Initialize Droppy.
+
     var droppy = new Droppy( element, {
         parentSelector: 'li',
         dropdownSelector: 'li > ul',
@@ -102,6 +102,8 @@ $(document).ready(function(){
     } );
 
     $('.gallery').photoswipe();
+
+    $('.preloader').fadeOut();
 
     function heightses() {
         if ($(window).width()<480) {
@@ -143,7 +145,30 @@ $(document).ready(function(){
     /** FORMS END*/
 
 
-    setTimeout(function(){
+
+    function loadScript(url, callback){
+        var script = document.createElement("script");
+
+        if (script.readyState){  // IE
+            script.onreadystatechange = function(){
+                if (script.readyState == "loaded" ||
+                    script.readyState == "complete"){
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {  // Другие браузеры
+            script.onload = function(){
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+
+    function initMap() {
         ymaps.ready(function(){
             var mapId = $('#map'),
                 attitude = mapId.data("att"),
@@ -167,6 +192,12 @@ $(document).ready(function(){
                 });
 
             map.geoObjects.add(myPlacemark);
+        });
+    }
+
+    setTimeout(function(){
+        loadScript("https://api-maps.yandex.ru/2.1/?apikey=e470b388-a1d0-4edf-acdc-34b4bc5bedee&lang=ru_RU&loadByRequire=1", function(){
+            initMap();
         });
     }, 2000);
 
