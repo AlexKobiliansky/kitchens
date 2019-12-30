@@ -93,6 +93,27 @@ $(document).ready(function(){
         // animateOut: "fadeOut",
     });
 
+    $('.cat-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        margin: 20,
+        dots: false,
+        autoHeight: false,
+        navText: ["", ""],
+        responsive : {
+
+            0 : {
+                items: 1
+            },
+            481 : {
+                items: 2
+            },
+            992 : {
+                items: 3
+            }
+        }
+    });
+
     var element = document.querySelector( '.main-mnu' );
 
     var droppy = new Droppy( element, {
@@ -107,8 +128,8 @@ $(document).ready(function(){
     $('.preloader').fadeOut();
 
     function heightses() {
-        if ($(window).width()<480) {
-
+        if ($(window).width()>480) {
+            $('.cat-item-chars').height('auto').equalHeights();
         }
 
         $('.step-item-title').height('auto').equalHeights();
@@ -196,10 +217,14 @@ $(document).ready(function(){
         });
     }
 
-    setTimeout(function(){
-        loadScript("https://api-maps.yandex.ru/2.1/?apikey=e470b388-a1d0-4edf-acdc-34b4bc5bedee&lang=ru_RU&loadByRequire=1", function(){
-            initMap();
-        });
-    }, 2000);
+    if( $('#map').length )         // use this if you are using id to check
+    {
+        setTimeout(function(){
+            loadScript("https://api-maps.yandex.ru/2.1/?apikey=e470b388-a1d0-4edf-acdc-34b4bc5bedee&lang=ru_RU&loadByRequire=1", function(){
+                initMap();
+            });
+        }, 2000);
+    }
+
 
 });

@@ -1,0 +1,91 @@
+.s-catalog
+  background-image: url('../img/bg-content.jpg')
+  background-size: 100%
+  background-position: top center
+  background-repeat: repeat-y
+  padding-bottom: 70px
+  .breadcrumbs
+    margin-bottom: 50px
+  .section-title
+    margin-bottom: 20px
+  &:before
+    background-image: url('../img/bg-catalog-before.png')
+    background-position: center 250px
+  .before-text
+    top: 50px
+    z-index: -1
+    font-size: 311px
+
+.catalog-block
+  padding: 0 50px
+  margin-bottom: 70px
+  &:last-child
+    margin-bottom: 0
+
+.cat-item
+  &-img
+    background-color: $accent
+    position: relative
+    +bg-cover
+    height: 250px
+    display: flex
+    justify-content: center
+    align-items: center
+    .btn
+      position: relative
+      z-index: 2
+      opacity: 0
+      pointer-events: none
+    .add-to-favorites
+      position: absolute
+      z-index: 2
+      right: 8px
+      top: 11px
+      .svg
+        height: 21px
+        width: auto
+        +mt(.3s)
+      &:hover
+        .svg
+          fill: $accent
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: #fff
+      opacity: .1
+      +mt(.3s)
+    &:hover
+      .btn
+        opacity: 1
+        pointer-events: auto
+      &:after
+        opacity: .5
+  &-content
+    background-color: #fff
+    padding: 15px 12px 12px
+  &-char
+    margin-bottom: 8px
+  &-chars
+    margin-bottom: 20px
+  &-price
+    font-family: "BebasNeue", sans-serif
+    font-size: 25px
+    font-weight: 700
+    color: $accent
+    line-height: 1
+    span
+      font-size: 33px
+
+.cat-slider
+  .owl-nav
+    button.owl-prev
+      left: -50px
+    button.owl-next
+      right: -50px
+
+
+
