@@ -101,7 +101,6 @@ $(document).ready(function(){
         autoHeight: false,
         navText: ["", ""],
         responsive : {
-
             0 : {
                 items: 1
             },
@@ -110,6 +109,34 @@ $(document).ready(function(){
             },
             992 : {
                 items: 3
+            }
+        }
+    });
+
+    $('.kitchens-slider').owlCarousel({
+        loop:true,
+        nav: false,
+        dots: false,
+        autoHeight: true,
+        navText: ["", ""],
+        // center: true,
+        merge:true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 6000,
+        autoplaySpeed: 600,
+        responsive : {
+            0 : {
+                items: 1
+            },
+            481 : {
+                items: 2
+            },
+            768 : {
+                items: 3
+            },
+            992 : {
+                items: 4
             }
         }
     });
@@ -124,6 +151,7 @@ $(document).ready(function(){
 
     $('.gallery').photoswipe();
     $('.serts-wrap').photoswipe();
+    $('.kitchen-slide').photoswipe();
 
     $('.preloader').fadeOut();
 

@@ -1,0 +1,43 @@
+.s-kitchens
+  padding: 40px 0 75px
+  background-color: #fff
+  .section-title
+    text-align: right
+    margin-bottom: 10px
+    position: relative
+    z-index: 2
+  .before-text
+    color: #f3f4f3
+    z-index: 0
+    right: -30px
+    top: 30px
+  .container
+    position: relative
+
+.kitchens-slider
+  .owl-stage-outer
+    overflow: visible
+
+.kitchens-slider
+  .owl-item.active
+    .kitchen-slide
+      &:after
+        opacity: 0
+        z-index: -1
+  .firstActiveItem
+    margin-left: 50px
+  .lastActiveItem
+    margin-right: 50px!important
+
+.kitchen-slide
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: #fff
+    opacity: .5
+    +mt(.3s)
