@@ -141,6 +141,29 @@ $(document).ready(function(){
         }
     });
 
+    $('.product-slider').owlCarousel({
+        loop:true,
+        nav:false,
+        autoHeight: true,
+        items: 1,
+        thumbs: true,
+        dots: true,
+        thumbsPrerendered: true,
+        thumbItemClass: 'product-nav',
+        animateIn: "fadeIn",
+        animateOut: "fadeOut",
+    });
+
+    $('.views-slider').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>'
+    });
+
     var element = document.querySelector( '.main-mnu' );
 
     var droppy = new Droppy( element, {
@@ -152,6 +175,7 @@ $(document).ready(function(){
     $('.gallery').photoswipe();
     $('.serts-wrap').photoswipe();
     $('.kitchen-slide').photoswipe();
+    $('.product-slide').photoswipe();
 
     $('.preloader').fadeOut();
 

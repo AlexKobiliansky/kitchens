@@ -1,0 +1,68 @@
+.cart-item
+  display: flex
+  justify-content: space-between
+  margin-bottom: 50px
+  &-img
+    width: 330px
+    height: 265px
+    +bg-cover
+  &-content
+    width: calc(100% - 350px)
+    position: relative
+    padding-right: 220px
+  &-title
+    font-size: 28px
+    font-weight: 700
+    line-height: 1
+    margin-bottom: 5px
+  &-code
+    font-weight: 300
+    color: #c4c4c4
+    margin-bottom: 5px
+  .char-item
+    margin-bottom: 18px
+    &:last-child
+      margin-bottom: 0
+  &-topright
+    position: absolute
+    right: 0
+    top: 0
+  &-delete
+    color: $accent
+    line-height: 1
+    display: block
+    margin-bottom: 12px
+    .svg
+      width: 12px
+      height: auto
+      fill: $accent
+      margin-right: 5px
+      position: relative
+      top: 2px
+    &:hover, &:active, &:focus
+      color: $accent
+  &-chosen
+    display: block
+    text-align: right
+    .svg
+      width: 35px
+      height: auto
+      fill: $accent
+  &-bottomright
+    position: absolute
+    right: 0
+    bottom: 0
+    text-align: right
+  &-price
+    font-family: "BebasNeue", sans-serif
+    color: $accent
+    font-size: 32px
+    line-height: 1
+    margin-bottom: 5px
+    span
+      font-size: 42px
+      font-weight: 700
+
+.favorites-wrap
+  border-bottom: 3px solid $accent
+  margin-bottom: 30px

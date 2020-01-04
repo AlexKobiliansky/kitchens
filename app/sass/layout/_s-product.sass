@@ -1,0 +1,155 @@
+.s-product
+  padding-bottom: 35px
+
+.product
+  display: flex
+  justify-content: space-between
+  padding-bottom: 28px
+  border-bottom: 3px solid $accent
+  margin-bottom: 30px
+  &-slide
+    background-color: $accent
+  &-nav
+    background-color: $accent
+  &-part
+    width: calc(50% - 10px)
+  &-right
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &-title
+    font-size: 28px
+    font-weight: 700
+    margin-bottom: 5px
+  &-code
+    font-weight: 300
+    color: #c4c4c4
+    margin-bottom: 5px
+  &-chars
+    margin: 30px 0
+  &-char
+    margin-bottom: 12px
+  &-bottom
+    margin-top: 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-price
+    font-family: "BebasNeue", sans-serif
+    font-weight: normal
+    color: $accent
+    font-size: 31px
+    line-height: 1
+    span
+      font-size: 42px
+      font-weight: 700
+  &-bottom-buttons
+    display: flex
+    align-items: center
+    .add-to-favorites
+      display: inline-block
+      margin-left: 18px
+      .svg
+        height: 35px
+        width: auto
+        +mt(.3s)
+      &:hover
+        .svg
+          fill: $accent
+
+
+.product-slider-nav
+  display: flex
+
+.product-nav
+  width: calc(25% - 13.5px)
+  margin-right: 18px
+  height: 105px
+  +bg-cover
+  margin-top: 20px
+  cursor: pointer
+  &:nth-child(4n)
+    margin-right: 0
+
+.product-slider
+  button.owl-dot
+    +mt(.3s)
+    width: 5px
+    height: 5px
+    background-color: #fff
+    margin: 0 8px
+    &.active
+      width: 11px
+      height: 9px
+      border: 1px solid #fff
+      background-color: transparent
+  .owl-dots
+    position: absolute
+    left: 0
+    bottom: 15px
+    width: 100%
+    text-align: center
+
+
+.last-views
+  h3
+    font-size: 28px
+    font-weight: normal
+
+.views-wrap
+  display: flex
+
+.view-item
+  width: calc(25% - 9px)
+  height: 190px
+  +bg-cover
+  margin-right: 12px
+  background-color: $accent
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  &:last-child
+    margin-right: 0
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: #fff
+    opacity: 0
+    +mt(.3s)
+  .btn
+    position: relative
+    z-index: 3
+    opacity: 0
+    pointer-events: none
+  &:hover
+    &:after
+      opacity: .5
+    .btn
+      opacity: 1
+      pointer-events: visible
+
+.views-slider
+  position: relative
+  padding: 0 30px
+  display: none
+  .slick-prev, .slick-next
+    width: 10px
+    height: 21px
+    +bg-cover
+    background-image: url('../img/icons/slider-arrow.svg')
+    cursor: pointer
+    box-shadow: none
+    background-color: transparent
+    border: none
+    position: absolute
+    top: calc(50% - 10.5px)
+  .slick-prev
+    left: 0
+  .slick-next
+    transform: rotate(180deg)
+    right: 0

@@ -58,6 +58,45 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .cart-item
+    &-content
+      width: 100%
+      padding-right: 0
+    &-img
+      width: 100%
+      margin: 15px 0
+      height: 300px
+    &-chosen
+      .svg
+        width: 28px
+        height: auto
+    &-title
+      padding-right: 70px
+
+  .last-views
+    h3
+      font-size: 24px
+      margin-bottom: 15px
+
+  .view-item
+    width: calc(33.333% - 12px)
+    margin-right: 18px
+    height: 160px
+    &:nth-child(3)
+      margin-right: 0
+    &:nth-child(4)
+      display: none
+
+
+
+  .product
+    &-left
+      display: none
+    &-right
+      width: 100%
+    &-slider
+      margin-top: 30px
+
   .s-kitchens
     padding-bottom: 50px
 
@@ -299,6 +338,55 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .cart-item
+    &-title
+      font-size: 16px
+      margin-bottom: 10px
+    &-img
+      height: 240px
+    &-bottomright
+      position: relative
+      margin-top: 25px
+      text-align: center
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+    &-price
+      font-size: 30px
+      span
+        font-size: 38px
+
+
+  .product
+    &-title
+      font-size: 22px
+    &-nav
+      margin-top: 8px
+      width: calc(25% - 6px)
+      margin-right: 8px
+      height: 60px
+    &-price
+      font-size: 24px
+      span
+        font-size: 28px
+
+  .views-wrap
+    display: none
+
+  .views-slider
+    display: block
+
+  .last-views
+    h3
+      padding-left: 30px
+
+  .view-item
+    width: 100%
+    margin-right: 0
+    margin-bottom: 10px
+    display: flex !important
+    height: 220px
+
   .serts-wrap
     justify-content: space-between
 
@@ -459,6 +547,9 @@
     text-align: center
 
 @media screen and (max-width: 370px)
+
+  .view-item
+    height: 180px
 
   .catalog-block
     padding-left: 20px
