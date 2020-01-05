@@ -101,6 +101,11 @@ ul
   &:hover
     color: #fff
     background-color: $accent
+  &.disabled
+    background-color: $accent
+    color: #fff
+    filter: grayscale(.4)
+    pointer-events: none
 
 .btn-largetext
   font-size: 33px
@@ -185,7 +190,7 @@ form
     span
       display: block
       font-size: 17px
-  input
+  input, textarea
     font-size: 17px
     line-height: 1
     padding: 9px 14px 9px
@@ -204,6 +209,8 @@ form
     padding: 10px 17px 8px
   .help-block
     display: none
+  textarea
+    height: 100px
 
 .arrow-form
   .form-labels-wrap
@@ -231,6 +238,54 @@ form
       left: 7px
       bottom: 10px
       transform: rotate(180deg)
+
+.popup-form
+  display: block
+  position: relative
+  background-color: $grey
+  width: 100%
+  max-width: 450px
+  margin-left: auto
+  margin-right: auto
+  padding: 35px 60px
+  text-align: center
+  label
+    display: block
+    margin-bottom: 20px
+  .btn
+    width: 100%
+  h3
+    font-size: 24px
+  p
+    font-size: 16px
+
+.popup-greeting
+  padding: 50px
+  h3
+    margin-bottom: 15px
+  p
+    margin-bottom: 0
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form, .video-popup
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form, &.mfp-ready .video-popup
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form, &.mfp-removing .video-popup
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
 
 .isnohome
   background-color: $grey

@@ -203,9 +203,51 @@ $(document).ready(function(){
         scrollToTopOnError: false
     });
 
+    $(function() {
+        $(".btn-popup").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
+    // $("form").click(function() {
+    //     var th = $(this);
+    //     th.find(".btn").prop("disabled", "disabled").addClass("disabled");
+    //
+    //     if (th.hasClass('cart-form')) {
+    //         $('#cart .cart-item').each(function () {
+    //             var name = $(this).find('.cart-item-title').text();
+    //             console.log(name);
+    //         })
+    //     };
+    // });
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled");
+
+        if (th.hasClass('cart-form')) {
+            var k = 1;
+          $('#cart .cart-item').each(function () {
+            var name = $(this).find('.cart-item-title').text().replace("\"", '&#171;').replace("\"", '&#187;');;
+            var code = $(this).find('.cart-item-code').text();
+
+            $('#cart-form').append('<input type="hidden" name="Название и код кухни '+k+'" value="'+name+' ['+code+']">');
+            k++;
+
+          })
+        };
+
+
+
 
         $.ajax({
             type: "POST",
@@ -213,6 +255,31 @@ $(document).ready(function(){
             data: th.serialize()
         }).done(function() {
 
+            $.magnificPopup.open({
+                items: {
+                    src: '#popup-greeting'
+                },
+                type: 'inline',
+
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-request'
+            }, 0);
+
+
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled");
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 3000);
         });
         return false;
     });
