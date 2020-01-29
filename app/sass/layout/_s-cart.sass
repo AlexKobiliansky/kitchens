@@ -14,10 +14,15 @@
     position: relative
     padding-right: 220px
   &-title
+    display: inline-block
     font-size: 28px
     font-weight: 700
     line-height: 1
     margin-bottom: 5px
+    +mt(.3s)
+    color: $text
+    &:hover
+      color: $accent
   &-code
     font-weight: 300
     color: #c4c4c4
@@ -44,9 +49,10 @@
       top: 2px
     &:hover, &:active, &:focus
       color: $accent
-  &-chosen
+  &-chosen, .simplefavorite-button
     display: block
     text-align: right
+    cursor: pointer
     .svg
       width: 35px
       height: auto

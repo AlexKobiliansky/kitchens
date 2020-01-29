@@ -14,12 +14,6 @@
   .cat-item-img
     height: 180px
 
-  .foot-payment
-    margin-right: 65px
-
-  .payment
-    margin-right: 25px
-
   .step-item-title
     &:before
       border-right-width: 102px
@@ -62,6 +56,15 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .foot-payment
+    margin-bottom: 30px
+
+  .cat-wrap
+    justify-content: space-between
+    .cat-item
+      width: calc(50% - 10px)
+      margin-right: 0
 
   .cart-form-wrap
     flex-direction: column
@@ -264,6 +267,10 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .catalog-block
+    padding-left: 0
+    padding-right: 0
+
   .p-content
     h3
       font-size: 44px
@@ -348,6 +355,16 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .catalog-block
+    padding-left: 50px
+    padding-right: 50px
+
+  .cat-wrap
+    .cat-item
+      width: 100%
+      &-img
+        height: 220px
 
   .popup-form
     padding: 35px 25px
@@ -572,12 +589,12 @@
 
 @media screen and (max-width: 370px)
 
+  .catalog-block
+    padding-left: 0
+    padding-right: 0
+
   .view-item
     height: 180px
-
-  .catalog-block
-    padding-left: 20px
-    padding-right: 20px
 
   .cat-slider
     .owl-nav

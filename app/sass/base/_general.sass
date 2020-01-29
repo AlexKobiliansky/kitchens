@@ -292,6 +292,8 @@ form
 
 .breadcrumbs
   padding: 18px 0
+  position: relative
+  z-index: 5
   a
     +mt(.3s)
     display: inline-block
@@ -309,11 +311,6 @@ form
       pointer-events: none
       &:after
         display: none
-
-
-
-
-
 
 
 .preloader
@@ -383,5 +380,16 @@ form
   100%
     transform: rotate(-360deg)
 
+
+.simplefavorite-button.active
+  opacity: 1!important
+
+
+.pswp--touch
+  .pswp__button--arrow--left, .pswp__button--arrow--right
+    visibility: visible!important
+
+.pswp__counter
+  display: none !important
 
 

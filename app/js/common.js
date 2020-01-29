@@ -142,7 +142,7 @@ $(document).ready(function(){
     });
 
     $('.product-slider').owlCarousel({
-        loop:true,
+        loop:false,
         nav:false,
         autoHeight: true,
         items: 1,
@@ -174,8 +174,8 @@ $(document).ready(function(){
 
     $('.gallery').photoswipe();
     $('.serts-wrap').photoswipe();
-    $('.kitchen-slide').photoswipe();
-    $('.product-slide').photoswipe();
+    $('.kitchens-slider').photoswipe();
+    $('.product-slider').photoswipe();
 
     $('.preloader').fadeOut();
 
@@ -251,7 +251,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
         }).done(function() {
 
